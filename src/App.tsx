@@ -6,12 +6,8 @@ import {
   ExternalLink,
   Github,
   GraduationCap,
-  HeartPulse,
   LaptopMinimal,
   LayoutGrid,
-  Mail,
-  MapPin,
-  Phone,
   Sparkles,
   Users,
 } from 'lucide-react';
@@ -126,18 +122,11 @@ const highlights = [
   { value: '2', label: 'certifications listed' },
 ];
 
-const contactItems = [
-  { icon: MapPin, label: 'Dhaka, Bangladesh', href: '#contact' },
-  { icon: Phone, label: '+8801322458732', href: 'tel:+8801322458732' },
-  { icon: Mail, label: 'ahmedrazon58@gmail.com', href: 'mailto:ahmedrazon58@gmail.com' },
-];
-
 const navItems = [
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '#home' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 function SectionTitle({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
@@ -166,10 +155,12 @@ function App() {
             ))}
           </nav>
           <a
-            href="mailto:ahmedrazon58@gmail.com"
+            href="https://wa.me/8801322458732"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-glow hover:bg-slate-800"
           >
-            Contact
+            WhatsApp Me
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
@@ -181,15 +172,15 @@ function App() {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-sm font-medium text-sky-800 shadow-sm">
                 <Sparkles className="h-4 w-4" />
-                Full Stack Developer, ML Engineer, and AI Automation Enthusiast
+                Full Stack Developer, ML Engineer, and AI Automation
               </div>
               <div className="space-y-5">
                 <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-950 sm:text-5xl lg:text-6xl">
-                  Building intelligent web products, data-driven systems, and automation workflows.
+                  Building reliable web products, data-driven systems, and automation workflows.
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                  Recent Computer Science graduate with hands-on expertise in Django, React, machine learning, and AI-driven automation.
-                  I focus on practical products that combine clean interfaces with useful intelligence.
+                  Recent Computer Science graduate with hands-on experience in Django, React, machine learning, and AI-driven automation.
+                  I build practical products with clean interfaces, solid backend logic, and clear user outcomes.
                 </p>
               </div>
 
@@ -212,6 +203,32 @@ function App() {
                 </a>
               </div>
 
+              <div className="grid gap-3 rounded-[1.75rem] border border-slate-200 bg-white/85 p-4 shadow-sm sm:grid-cols-3">
+                <a
+                  href="mailto:ahmedrazon58@gmail.com"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-sky-300 hover:bg-sky-50"
+                >
+                  <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Email</div>
+                  <div className="mt-1 text-sm font-semibold text-slate-900">ahmedrazon58@gmail.com</div>
+                </a>
+                <a
+                  href="tel:+8801322458732"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-sky-300 hover:bg-sky-50"
+                >
+                  <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Phone</div>
+                  <div className="mt-1 text-sm font-semibold text-slate-900">+8801322458732</div>
+                </a>
+                <a
+                  href="https://maps.google.com/?q=Dhaka,Bangladesh"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-sky-300 hover:bg-sky-50"
+                >
+                  <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Location</div>
+                  <div className="mt-1 text-sm font-semibold text-slate-900">Dhaka, Bangladesh</div>
+                </a>
+              </div>
+
               <div className="grid gap-4 sm:grid-cols-3">
                 {highlights.map((item) => (
                   <div key={item.label} className="rounded-3xl border border-white/70 bg-white/75 p-5 shadow-sm backdrop-blur">
@@ -222,77 +239,21 @@ function App() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 -z-10 rounded-[2rem] bg-sky-200/50 blur-3xl" />
-              <div className="rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-glow backdrop-blur-xl sm:p-8">
-                <div className="flex items-center gap-4 border-b border-slate-200 pb-6">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-950 text-xl font-bold text-white">
-                    SAR
-                  </div>
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.25em] text-slate-500">Portfolio snapshot</p>
-                    <h2 className="text-2xl font-bold text-slate-950">Sajib Ahmed Razon</h2>
-                    <p className="text-sm text-slate-600">Dhaka, Bangladesh</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4 py-6">
-                  {contactItems.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-sky-300 hover:bg-sky-50"
-                    >
-                      <div className="rounded-xl bg-white p-2 text-sky-700 shadow-sm">
-                        <item.icon className="h-5 w-5" />
-                      </div>
-                      <span className="text-sm font-medium text-slate-700">{item.label}</span>
-                    </a>
-                  ))}
-                </div>
-
-                <div className="grid gap-3 rounded-3xl bg-slate-950 p-5 text-white sm:grid-cols-3">
-                  <div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-slate-400">Focus</div>
-                    <div className="mt-2 text-sm font-semibold">Web + ML + Automation</div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-slate-400">Strength</div>
-                    <div className="mt-2 text-sm font-semibold">End-to-end delivery</div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-slate-400">Goal</div>
-                    <div className="mt-2 text-sm font-semibold">Product impact</div>
-                  </div>
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div className="absolute inset-0 -z-10 rounded-[2rem] bg-sky-300/40 blur-3xl" />
+              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/80 p-4 shadow-glow backdrop-blur-xl sm:p-5">
+                <img
+                  src="/profile.png"
+                  alt="Sajib Ahmed Razon"
+                  className="h-[360px] w-full rounded-[1.5rem] object-cover object-top sm:h-[440px]"
+                />
+                <div className="mt-4 rounded-2xl bg-slate-950 px-4 py-3 text-sm text-slate-200">
+                  <p className="font-semibold text-white">Sajib Ahmed Razon</p>
+                  <p className="mt-1 text-slate-300">Full Stack Developer | ML Engineer</p>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        <section id="about" className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-          <SectionTitle
-            eyebrow="Profile"
-            title="A practical builder with a product mindset"
-            description="I enjoy turning ideas into usable software across the stack. My work blends backend logic, frontend polish, machine learning experiments, and lightweight automation so the final product does more than just look good."
-          />
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            <div className="rounded-3xl border border-white/80 bg-white/80 p-6 shadow-sm lg:col-span-2">
-              <p className="text-base leading-8 text-slate-700">
-                Recent Computer Science graduate with hands-on expertise in Full-Stack Software Development, Machine Learning, and AI Automation.
-                Proficient in building scalable Django applications, implementing ML models from concept to deployment, and creating automation workflows
-                that improve efficiency and user experience.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-slate-200 bg-slate-950 p-6 text-white shadow-glow">
-              <div className="flex items-center gap-3 text-sky-300">
-                <HeartPulse className="h-5 w-5" />
-                <span className="text-sm font-semibold uppercase tracking-[0.2em]">Current direction</span>
-              </div>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                Building responsive web experiences and AI-enabled systems while expanding depth in emerging technologies.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -468,31 +429,18 @@ function App() {
           </div>
         </section>
 
-        <section id="contact" className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-20 lg:pt-14">
-          <div className="rounded-[2rem] border border-slate-200 bg-slate-950 px-6 py-10 text-white shadow-glow sm:px-8 lg:px-10">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-300">Contact</p>
-                <h2 className="mt-3 text-3xl font-bold md:text-4xl">Open to internships, junior roles, and project collaboration.</h2>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
-                  If you want a developer who can handle frontend, backend, data work, and automation in one place, this portfolio gives a solid starting point.
-                </p>
-              </div>
-              <div className="grid gap-3">
-                <a href="mailto:ahmedrazon58@gmail.com" className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-medium hover:bg-white/10">
-                  ahmedrazon58@gmail.com
-                </a>
-                <a href="tel:+8801322458732" className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-medium hover:bg-white/10">
-                  +8801322458732
-                </a>
-                <a href="https://github.com/Razon-1" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-medium hover:bg-white/10">
-                  github.com/Razon-1
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
+
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/90 px-4 py-3 shadow-[0_-10px_30px_rgba(15,23,42,0.12)] backdrop-blur md:hidden">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-2 text-center text-xs font-semibold text-slate-700">
+          <a href="tel:+8801322458732" className="rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 hover:border-sky-300 hover:bg-sky-50">
+            Call
+          </a>
+          <a href="mailto:ahmedrazon58@gmail.com" className="rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 hover:border-sky-300 hover:bg-sky-50">
+            Email
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
