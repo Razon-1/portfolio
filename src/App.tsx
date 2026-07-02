@@ -6,6 +6,7 @@ import {
   ExternalLink,
   Github,
   GraduationCap,
+  Linkedin,
   LaptopMinimal,
   LayoutGrid,
   Sparkles,
@@ -201,9 +202,18 @@ function App() {
                   <Github className="h-4 w-4" />
                   GitHub
                 </a>
+                <a
+                  href="https://linkedin.com/in/sajib-ahmed-razon-5a3b4b337"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-950"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn
+                </a>
               </div>
 
-              <div className="grid gap-3 rounded-[1.75rem] border border-slate-200 bg-white/85 p-4 shadow-sm sm:grid-cols-3">
+              <div className="grid gap-3 rounded-[1.75rem] border border-slate-200 bg-white/85 p-4 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
                 <a
                   href="mailto:ahmedrazon58@gmail.com"
                   className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-sky-300 hover:bg-sky-50"
@@ -226,6 +236,15 @@ function App() {
                 >
                   <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Location</div>
                   <div className="mt-1 text-sm font-semibold text-slate-900">Dhaka, Bangladesh</div>
+                </a>
+                <a
+                  href="https://linkedin.com/in/sajib-ahmed-razon-5a3b4b337"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-sky-300 hover:bg-sky-50"
+                >
+                  <div className="text-xs uppercase tracking-[0.24em] text-slate-500">LinkedIn</div>
+                  <div className="mt-1 text-sm font-semibold text-slate-900">/sajib-ahmed-razon</div>
                 </a>
               </div>
 
@@ -432,12 +451,15 @@ function App() {
       </main>
 
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/90 px-4 py-3 shadow-[0_-10px_30px_rgba(15,23,42,0.12)] backdrop-blur md:hidden">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-2 text-center text-xs font-semibold text-slate-700">
+        <div className="mx-auto grid max-w-7xl grid-cols-3 gap-2 text-center text-xs font-semibold text-slate-700">
           <a href="tel:+8801322458732" className="rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 hover:border-sky-300 hover:bg-sky-50">
             Call
           </a>
           <a href="mailto:ahmedrazon58@gmail.com" className="rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 hover:border-sky-300 hover:bg-sky-50">
             Email
+          </a>
+          <a href="https://linkedin.com/in/sajib-ahmed-razon-5a3b4b337" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 hover:border-sky-300 hover:bg-sky-50">
+            LinkedIn
           </a>
         </div>
       </div>
