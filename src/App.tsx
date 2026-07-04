@@ -280,7 +280,6 @@ function App() {
           <SectionTitle
             eyebrow="Skills"
             title="Core technologies organized by how I use them"
-            description="The stack below reflects the tools I use to move from prototype to production-style work."
           />
           <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {skillGroups.map((group) => (
@@ -307,7 +306,6 @@ function App() {
           <SectionTitle
             eyebrow="Experience"
             title="Professional context and growth"
-            description="A short summary of the internship experience currently listed in the CV."
           />
           <div className="mt-8 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-3xl border border-slate-200 bg-slate-950 p-6 text-white shadow-glow">
@@ -337,7 +335,6 @@ function App() {
           <SectionTitle
             eyebrow="Education"
             title="Academic foundation"
-            description="A quick overview of formal education from the CV."
           />
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <article className="rounded-3xl border border-white/80 bg-white/85 p-6 shadow-sm">
@@ -409,7 +406,6 @@ function App() {
           <SectionTitle
             eyebrow="Certifications & Activities"
             title="Proof of learning and interests"
-            description="The CV’s certification and interest section translated into a clean card layout."
           />
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
             <div className="space-y-4 rounded-3xl border border-white/80 bg-white/85 p-6 shadow-sm lg:col-span-2">
