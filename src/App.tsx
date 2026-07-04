@@ -364,7 +364,6 @@ function App() {
           <SectionTitle
             eyebrow="Projects"
             title="Selected work with real implementation details"
-            description="These are framed as portfolio cards so recruiters can quickly scan the problem, stack, and outcome."
           />
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {projects.map((project) => (
